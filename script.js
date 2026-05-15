@@ -554,7 +554,7 @@ function startTypewriter(card, id) {
   body.appendChild(cursor);
 
   let i = 0;
-  const speed = isMobile() ? 28 : 38;
+  const speed = isMobile() ? 10 : 15;
 
   function type() {
     if (i < text.length) {
@@ -651,7 +651,7 @@ function setMusicUI(playing) {
       bar.hidden = false;
       bar.classList.add("is-visible", "is-playing");
     }
-    if (status) status.textContent = "is playing";
+    if (status) status.textContent = "Apocalypse";
   } else {
     btn?.classList.remove("is-playing");
     btn?.setAttribute("aria-pressed", "false");
