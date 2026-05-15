@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#fce8f4" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Garv ❤️ Satakshi — Our Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" id="site-styles" />
+  <script>
+    (function () {
+      if (location.protocol === "file:") return;
+      var p = location.pathname;
+      var last = p.split("/").pop() || "";
+      if (/\.[a-z0-9]+$/i.test(last)) p = p.replace(/\/[^/]+$/, "/");
+      else if (!p.endsWith("/")) p += "/";
+      var el = document.getElementById("site-styles");
+      if (el) el.href = p + "styles.css";
+    })();
+  </script>
+</head>
+<body class="site-locked">
+
+  <div class="password-gate" id="password-gate" role="dialog" aria-modal="true" aria-labelledby="password-gate-title">
+    <div class="password-gate-hearts" id="password-gate-hearts" aria-hidden="true"></div>
+    <div class="password-gate-card glass-card">
+      <h1 class="password-gate-title" id="password-gate-title">Enter Password to enter the website 💖</h1>
+      <p class="password-hint">
+        (ps: it's the birthday of my fav person in <span id="password-hint-date">dd/mm/yyyy</span>)
+      </p>
+      <form class="password-form" id="password-form" autocomplete="off">
+        <input
+          type="password"
+          class="password-input"
+          id="password-input"
+          placeholder="Type password..."
+          aria-label="Password"
+          inputmode="numeric"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="password-submit">Enter 💖</button>
+      </form>
+      <p class="password-error" id="password-error" hidden>Try again 💔</p>
+    </div>
+  </div>
+
+  <div class="site-content" id="site-content">
+  <div class="cinematic-curtain" id="cinematic-curtain" aria-hidden="true"></div>
+
+  <div class="bg-parallax" id="bg-parallax" aria-hidden="true"></div>
+  <div class="hearts-bg" id="hearts-bg" aria-hidden="true"></div>
+  <div class="hearts-scroll" id="hearts-scroll" aria-hidden="true"></div>
+
+  <iframe
+    id="yt-player"
+    class="yt-player"
+    width="0"
+    height="0"
+    src="https://www.youtube.com/embed/sElE_BfQ67s?autoplay=1&mute=1&loop=1&playlist=sElE_BfQ67s&enablejsapi=1&playsinline=1"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    title="Our song"
+  ></iframe>
+
+  <!-- Tap once to unmute (required by browsers) -->
+  <div class="sound-unlock" id="sound-unlock" hidden>
+    <button type="button" class="sound-unlock-btn glass-card" id="sound-unlock-btn">
+      💖 Tap to turn on sound
+    </button>
+  </div>
+
+  <nav class="nav glass-pill" aria-label="Story scenes">
+    <a href="#hero">Intro</a>
+    <a href="#timer">Time</a>
+    <a href="#message">Message</a>
+    <a href="#poems">Poems</a>
+    <a href="#why">Love</a>
+    <a href="#finale">End</a>
+  </nav>
+
+  <main class="story">
+
+    <section class="scene scene-hero" id="hero" data-scene="1">
+      <div class="scene-glow scene-glow--top"></div>
+      <div class="hero-content reveal">
+        <p class="scene-label">Scene I · The Beginning</p>
+        <h1 class="hero-title">Garv ❤️ Satakshi</h1>
+        <p class="hero-subtitle">A story that started on 6 August 2025, 9:49 PM</p>
+        <div class="heart-cinematic" aria-hidden="true">
+          <span class="heart-beat">♥</span>
+        </div>
+        <p class="scroll-hint">scroll to unfold our story</p>
+      </div>
+    </section>
+
+    <section class="scene scene-timer" id="timer" data-scene="2" aria-labelledby="timer-heading">
+      <div class="scene-glow"></div>
+      <div class="scene-inner">
+        <header class="scene-header reveal">
+          <p class="scene-label">Scene II · Every Moment</p>
+          <h2 id="timer-heading" class="scene-title">Every second with you</h2>
+        </header>
+        <div class="timer-card glass-card reveal">
+          <div class="timer-grid">
+            <div class="timer-unit">
+              <span class="timer-value neon" id="timer-days">0</span>
+              <span class="timer-label">Days</span>
+            </div>
+            <div class="timer-unit">
+              <span class="timer-value neon" id="timer-hours">00</span>
+              <span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-unit">
+              <span class="timer-value neon" id="timer-minutes">00</span>
+              <span class="timer-label">Minutes</span>
+            </div>
+            <div class="timer-unit">
+              <span class="timer-value neon" id="timer-seconds">00</span>
+              <span class="timer-label">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene scene-transition" id="transition" data-scene="3">
+      <blockquote class="transition-quote glass-panel reveal">
+        <p>“Some people enter your life and suddenly everything feels lighter…”</p>
+      </blockquote>
+    </section>
+
+    <section class="scene scene-message" id="message" data-scene="4" aria-labelledby="message-heading">
+      <div class="scene-glow"></div>
+      <div class="scene-inner">
+        <header class="scene-header reveal">
+          <p class="scene-label">Scene IV · A Special Note</p>
+          <h2 id="message-heading" class="scene-title">For You 💖</h2>
+        </header>
+        <div class="special-message-card glass-card reveal">
+          <p class="special-message-text" id="special-message-text">
+            Thank you for being in my life and giving me a reason to look forward to each day. Before you, I was just moving through things without really thinking about where I was going or what I wanted. You changed that in a way I didn’t even realize was possible. You made me start caring about tomorrow, not just for me, but for us. You gave me a future to imagine when I didn’t even want one for myself. No matter what happens, I’ll always be grateful for the way you made my life feel lighter, warmer, and worth living again with hope.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene scene-poems" id="poems" data-scene="5" aria-labelledby="poems-heading">
+      <div class="scene-inner">
+        <header class="scene-header reveal">
+          <p class="scene-label">Scene V · Verses</p>
+          <h2 id="poems-heading" class="scene-title">Poems for You</h2>
+        </header>
+        <div class="poems-list" id="poems-list"></div>
+      </div>
+    </section>
+
+    <section class="scene scene-why" id="why" data-scene="6" aria-labelledby="why-heading">
+      <div class="scene-glow scene-glow--warm"></div>
+      <div class="scene-inner">
+        <header class="scene-header reveal">
+          <p class="scene-label">Scene VI · Reasons</p>
+          <h2 id="why-heading" class="scene-title">Why I Love You 💖</h2>
+        </header>
+        <div class="notes-field" id="notes-field"></div>
+      </div>
+    </section>
+
+    <section class="scene scene-music" id="music" data-scene="7">
+      <div class="music-stage glass-card reveal">
+        <p class="scene-label">Scene VII · Our Soundtrack</p>
+        <h2 class="scene-title">The song that feels like us 🎵</h2>
+        <p class="music-desc">Let it play softly while you read through our story.</p>
+        <button type="button" class="music-btn" id="music-btn" aria-pressed="false">
+          <span class="music-btn-icon">🎵</span>
+          <span class="music-btn-text">Turn sound on 💖</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="scene scene-finale" id="finale" data-scene="8">
+      <div class="finale-vignette" id="finale-vignette"></div>
+      <div class="finale-content reveal">
+        <p class="finale-quote">This is not just a website.<br />This is my feelings, saved in code.</p>
+        <p class="finale-sign">— Your Gadha 🐒❤️</p>
+        <p class="finale-names">Garv ❤️ Satakshi · Malkin & Gadha · forever</p>
+      </div>
+    </section>
+
+  </main>
+
+  </div><!-- /.site-content -->
+
+  <script src="script.js"></script>
+</body>
+</html>
