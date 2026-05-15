@@ -639,15 +639,30 @@ function setMusicUI(playing) {
   isAudible = playing;
   const btn = document.getElementById("music-btn");
   const btnText = btn?.querySelector(".music-btn-text");
+  const bar = document.getElementById("music-bar");
+  const status = document.getElementById("music-bar-status");
 
   if (playing) {
     btn?.classList.add("is-playing");
     btn?.setAttribute("aria-pressed", "true");
     if (btnText) btnText.textContent = "Sound is on 💖";
+
+    if (bar) {
+      bar.hidden = false;
+      bar.classList.add("is-visible", "is-playing");
+    }
+    if (status) status.textContent = "is playing";
   } else {
     btn?.classList.remove("is-playing");
     btn?.setAttribute("aria-pressed", "false");
     if (btnText) btnText.textContent = "Turn sound on 💖";
+
+    if (bar) {
+      bar.classList.remove("is-playing");
+      bar.classList.remove("is-visible");
+      setTimeout(() => bar.hidden = true, 500);
+    }
+    if (status) status.textContent = "paused";
   }
 }
 
@@ -694,6 +709,7 @@ function showSoundUnlock() {
 
 function initMusic() {
   const btn = document.getElementById("music-btn");
+  const bar = document.getElementById("music-bar");
 
   if (sessionStorage.getItem(SOUND_ENABLED_KEY) === "true") {
     setMusicUI(true);
@@ -710,6 +726,7 @@ function initMusic() {
   };
 
   btn?.addEventListener("click", toggle);
+  bar?.addEventListener("click", toggle);
 }
 
 /* ============================================
